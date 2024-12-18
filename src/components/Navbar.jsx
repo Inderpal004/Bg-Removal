@@ -15,11 +15,14 @@ const Navbar = () => {
       </Link>
 
       {
-        isSignedIn ? <div className='flex items-center gap-2 sm:gap-3'> <p className='text-gray-600 max-sm:hidden'>Hi, {user.firstName}</p> <UserButton /></div> : <button onClick={() => openSignIn({})} className='bg-zinc-800 flex text-white items-center gap-4 px-4 py-2 sm:px-8 sm:py-3 text-sm rounded-full'>
+        isSignedIn ? <div className='flex items-center gap-2 sm:gap-3'> <p className='text-gray-600 max-sm:hidden'>Hi, {user.firstName}</p> <UserButton  appearance={{
+          elements: {
+              avatarBox: "w-10 h-10"
+          }
+      }} /></div> : <button onClick={() => openSignIn({})} className='bg-zinc-800 flex text-white items-center gap-4 px-4 py-2 sm:px-8 sm:py-3 text-sm rounded-full'>
           Get Started <img className='w-3 sm:w-4' src={assets.arrow_icon} alt="arrow-icon" />
         </button>
       }
-
 
     </div>
   )
