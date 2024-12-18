@@ -5,12 +5,13 @@ import Result from './pages/Result';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ProtectedRoute from './components/ProtectedRoute';
-import { ToastContainer } from 'react-toastify';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
     <>
-    <ToastContainer/>
+      <Toaster position="top-center"
+        reverseOrder={true} />
       <div className='min-h-screen bg-slate-50'>
         <Navbar />
         <Routes>
